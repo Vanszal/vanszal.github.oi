@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Ulang Tahun Vanesa Adelia</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: url('cake.jpg') center center/cover no-repeat fixed;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0,0,0,0.6);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      padding: 60px 20px;
+    }
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.8);
+    }
+
+    .text {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .text p {
+      margin-bottom: 1em;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      animation: float 10s infinite linear;
+      color: #ff9aa2;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+  <div class="container">
+    <img src="vanesa.jpg" alt="Vanesa Adelia" class="photo">
+
+    <div class="text">
+      <p><strong>Sayang...</strong></p>
+      <p>Hari ini, dunia nambah satu tahun kehadiranmu.<br>
+      Seseorang yang begitu berharga… bukan cuma untuk orang-orang di sekitarmu, tapi paling penting, untukku.</p>
+
+      <p>Maaf banget… aku nggak bisa ada di sampingmu sekarang.<br>
+      Bukan karena aku nggak mau, tapi karena keadaan yang belum bisa ngizinin kita untuk saling tatap dan berbagi tawa seperti biasanya.</p>
+
+      <p>Tapi sungguh...<br>
+      Meski aku jauh, hatiku tetap erat menggenggam kamu.<br>
+      Doaku nggak pernah absen menyebut namamu—di tiap pagi, di tiap malam, dan di detik-detik ulang tahunmu ini.</p>
+
+      <p><strong>Selamat ulang tahun, cintaku...</strong><br>
+      Semoga kamu selalu dikelilingi hal-hal yang bikin kamu senyum, seperti senyumanmu yang selalu jadi alasanku bertahan.</p>
+
+      <p>Kalau boleh minta satu hal hari ini, aku cuma pengin kamu tahu:<br>
+      Aku mungkin nggak hadir secara fisik, tapi cintaku... nggak pernah absen.</p>
+
+      <p>Dan ketika waktu nanti bersahabat lagi, aku janji:<br>
+      Aku akan datang, dengan peluk yang hangat dan cerita panjang tentang betapa rindunya aku hari ini.</p>
+
+      <p><strong>Selamat ulang tahun,</strong><br>
+      Kamu yang selalu aku doakan,<br>
+      Kamu yang selalu aku jaga meski dari jauh,<br>
+      Kamu… rumah paling nyaman dalam semestaku.</p>
+
+      <p>🎂❤️<br> Aku sayang kamu. Selalu.</p>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio autoplay loop>
+    <source src="Rainbow.mp3" type="audio/mpeg">
+    Maaf, browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- Efek Hati -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      heart.textContent = "❤️";
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
